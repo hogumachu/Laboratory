@@ -13,7 +13,7 @@ final class Clients {
     var storage: [UUID: Client]
     
     var active: [Client] {
-        storage.values.filter { $0.socket.isClosed }
+        storage.values.filter { !$0.socket.isClosed }
     }
     
     init(eventLoop: EventLoop, storage: [UUID : Client]) {

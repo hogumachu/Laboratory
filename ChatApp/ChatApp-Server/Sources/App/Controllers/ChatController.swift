@@ -17,6 +17,7 @@ final class ChatController {
     
     func connect(ws: WebSocket) {
         ws.onBinary { [unowned self] ws, buffer in
+            print("# A")
             if let message = buffer.message(Connect.self) {
                 let client = Client(id: message.id, socket: ws)
                 clients.add(client)
@@ -33,7 +34,8 @@ final class ChatController {
         clients.active.compactMap { $0 }
             .forEach { client in
                 let message = Join(name: connect.name)
-                client.socket.send(message)
+                let data = try! JSONEncoder().encode(message)
+                client.socket.send([UInt8](data))
             }
     }
     
@@ -41,7 +43,8 @@ final class ChatController {
         clients.active.compactMap { $0 }
             .filter { $0.id != id }
             .forEach { client in
-                client.socket.send(chat)
+                let data = try! JSONEncoder().encode(chat)
+                client.socket.send([UInt8](data))
             }
     }
     
