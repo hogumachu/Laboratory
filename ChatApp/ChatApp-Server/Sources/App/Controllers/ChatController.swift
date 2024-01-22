@@ -17,7 +17,6 @@ final class ChatController {
     
     func connect(ws: WebSocket) {
         ws.onBinary { [unowned self] ws, buffer in
-            print("# A")
             if let message = buffer.message(Connect.self) {
                 let client = Client(id: message.id, socket: ws)
                 clients.add(client)
