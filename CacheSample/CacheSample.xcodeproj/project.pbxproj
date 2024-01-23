@@ -14,6 +14,8 @@
 		F17C02C52B5F6FC600EBF192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17C02C42B5F6FC600EBF192 /* Assets.xcassets */; };
 		F17C02C82B5F6FC600EBF192 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17C02C62B5F6FC600EBF192 /* LaunchScreen.storyboard */; };
 		F17C02D62B5F6FED00EBF192 /* CacheSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C02D52B5F6FED00EBF192 /* CacheSampleTests.swift */; };
+		F17C02DE2B5F73AC00EBF192 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = F17C02DD2B5F73AC00EBF192 /* Then */; };
+		F17C02E02B5F73D000EBF192 /* SomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C02DF2B5F73D000EBF192 /* SomeBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 		F17C02C92B5F6FC600EBF192 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F17C02D32B5F6FED00EBF192 /* CacheSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CacheSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F17C02D52B5F6FED00EBF192 /* CacheSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheSampleTests.swift; sourceTree = "<group>"; };
+		F17C02DF2B5F73D000EBF192 /* SomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F17C02DE2B5F73AC00EBF192 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +89,7 @@
 				F17C02C42B5F6FC600EBF192 /* Assets.xcassets */,
 				F17C02C62B5F6FC600EBF192 /* LaunchScreen.storyboard */,
 				F17C02C92B5F6FC600EBF192 /* Info.plist */,
+				F17C02DF2B5F73D000EBF192 /* SomeBuilder.swift */,
 			);
 			path = CacheSample;
 			sourceTree = "<group>";
@@ -113,6 +118,9 @@
 			dependencies = (
 			);
 			name = CacheSample;
+			packageProductDependencies = (
+				F17C02DD2B5F73AC00EBF192 /* Then */,
+			);
 			productName = CacheSample;
 			productReference = F17C02B82B5F6FC300EBF192 /* CacheSample.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +171,9 @@
 				Base,
 			);
 			mainGroup = F17C02AF2B5F6FC300EBF192;
+			packageReferences = (
+				F17C02DC2B5F73AC00EBF192 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = F17C02B92B5F6FC300EBF192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -201,6 +212,7 @@
 				F17C02C02B5F6FC300EBF192 /* ViewController.swift in Sources */,
 				F17C02BC2B5F6FC300EBF192 /* AppDelegate.swift in Sources */,
 				F17C02BE2B5F6FC300EBF192 /* SceneDelegate.swift in Sources */,
+				F17C02E02B5F73D000EBF192 /* SomeBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +496,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F17C02DC2B5F73AC00EBF192 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F17C02DD2B5F73AC00EBF192 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F17C02DC2B5F73AC00EBF192 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F17C02B02B5F6FC300EBF192 /* Project object */;
 }
