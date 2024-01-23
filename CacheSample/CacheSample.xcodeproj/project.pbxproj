@@ -173,6 +173,8 @@
 			mainGroup = F17C02AF2B5F6FC300EBF192;
 			packageReferences = (
 				F17C02DC2B5F73AC00EBF192 /* XCRemoteSwiftPackageReference "Then" */,
+				F17C02E12B5F7BD900EBF192 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				F17C02E22B5F7BE800EBF192 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = F17C02B92B5F6FC300EBF192 /* Products */;
 			projectDirPath = "";
@@ -504,6 +506,22 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 3.0.0;
+			};
+		};
+		F17C02E12B5F7BD900EBF192 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+		F17C02E22B5F7BE800EBF192 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
