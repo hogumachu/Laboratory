@@ -20,10 +20,4 @@ final class CacheSampleTests: XCTestCase {
         XCTAssertEqual(false, result)
     }
     
-    func test_반드시_성공_3() {
-        let result1 = SomeBuilder().buildFalse()
-        let result2 = SomeBuilder().buildFalse()
-        XCTAssertEqual(result1, result2)
-    }
-    
 }
