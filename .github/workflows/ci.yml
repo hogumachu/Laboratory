@@ -19,10 +19,11 @@ jobs:
       with:
         xcode-version: '15.0'
         
-    - uses: actions/cache@v3
+    - name: SPM Cache
+      uses: actions/cache@v3
       with:
-        path: .build
-        key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+        path: SourcePackages/
+        key: ${{ runner.os }}-spm-${{ hashFiles('CacheSample.xcworkspace/xcshareddata/swiftpm/Package.resolved') }}
         restore-keys: |
           ${{ runner.os }}-spm-
         
@@ -31,5 +32,6 @@ jobs:
         xcodebuild test \
         -workspace "$WORKSPACE" \
         -scheme "$SCHEME" \
+        -clonedSourcePackagesDirPath SourcePackages \
         -destination "$DESTINATION" \
         -enableCodeCoverage YES \
