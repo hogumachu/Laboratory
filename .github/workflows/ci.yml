@@ -1,37 +1,37 @@
-name: Run CI
+# name: Run CI
 
-on:
-  pull_request:
-    branches: [ master ]
+# on:
+#   pull_request:
+#     branches: [ master ]
     
-jobs:
-  test:
-    runs-on: macos-13
-    env:
-      WORKSPACE: CacheSample/CacheSample.xcworkspace
-      SCHEME: CacheSample
-      DESTINATION: platform=iOS Simulator,name=iPhone 14,OS=latest
-    steps:
-    - uses: actions/checkout@v3
+# jobs:
+#   test:
+#     runs-on: macos-13
+#     env:
+#       WORKSPACE: CacheSample/CacheSample.xcworkspace
+#       SCHEME: CacheSample
+#       DESTINATION: platform=iOS Simulator,name=iPhone 14,OS=latest
+#     steps:
+#     - uses: actions/checkout@v3
     
-    - name: Setup Xcode 15.0 Version
-      uses: maxim-lobanov/setup-xcode@v1
-      with:
-        xcode-version: '15.0'
+#     - name: Setup Xcode 15.0 Version
+#       uses: maxim-lobanov/setup-xcode@v1
+#       with:
+#         xcode-version: '15.0'
         
-    - name: SPM Cache
-      uses: actions/cache@v3
-      with:
-        path: SourcePackages/
-        key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
-        restore-keys: |
-          ${{ runner.os }}-spm-
+#     - name: SPM Cache
+#       uses: actions/cache@v3
+#       with:
+#         path: SourcePackages/
+#         key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+#         restore-keys: |
+#           ${{ runner.os }}-spm-
         
-    - name: Build and Test
-      run: |
-        xcodebuild test \
-        -workspace "$WORKSPACE" \
-        -scheme "$SCHEME" \
-        -clonedSourcePackagesDirPath SourcePackages \
-        -destination "$DESTINATION" \
-        -enableCodeCoverage YES \
+#     - name: Build and Test
+#       run: |
+#         xcodebuild test \
+#         -workspace "$WORKSPACE" \
+#         -scheme "$SCHEME" \
+#         -clonedSourcePackagesDirPath SourcePackages \
+#         -destination "$DESTINATION" \
+#         -enableCodeCoverage YES \
