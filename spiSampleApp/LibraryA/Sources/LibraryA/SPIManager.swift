@@ -28,3 +28,12 @@ public final class SPIManager {
     }
     
 }
+
+final class MyClass {
+    
+    func update() {
+        SPIManager.shared.version = "3" // can access same level
+        SPIManager.shared.isAuthorized = false // can access same level
+    }
+    
+}
