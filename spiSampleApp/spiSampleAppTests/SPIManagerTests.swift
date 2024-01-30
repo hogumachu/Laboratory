@@ -20,4 +20,10 @@ final class SPIManagerTests: XCTestCase {
         XCTAssertFalse(sut.requestAuthorization())
     }
     
+    func test_singleton_version() {
+        let sut = SPIManager.shared
+        sut.version = "-1"
+        XCTAssertEqual(sut.isValidVersion(version: "-1"), true)
+    }
+    
 }

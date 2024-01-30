@@ -11,8 +11,8 @@ public final class SPIManager {
     
     public static let shared = SPIManager()
     
-    @_spi(Testing) public private(set) var version = "1.0.0"
-    @_spi(Testing) public private(set) var isAuthorized = true
+    @_spi(Testing) public var version = "1.0.0"
+    @_spi(Testing) public var isAuthorized = true
     
     @_spi(Testing) public init(version: String = "1.0.0", isAuthorized: Bool = true) {
         self.version = version

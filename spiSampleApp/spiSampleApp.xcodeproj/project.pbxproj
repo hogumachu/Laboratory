@@ -18,6 +18,7 @@
 		F117342F2B68CFA400821BAF /* LibraryA in Frameworks */ = {isa = PBXBuildFile; productRef = F117342E2B68CFA400821BAF /* LibraryA */; };
 		F11734312B68D2C400821BAF /* CommonManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11734302B68D2C400821BAF /* CommonManagerTests.swift */; };
 		F11734332B68D32300821BAF /* SPIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11734322B68D32300821BAF /* SPIManagerTests.swift */; };
+		F11734352B68D47500821BAF /* No_SPIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11734342B68D47500821BAF /* No_SPIManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		F117342D2B68CF8900821BAF /* LibraryA */ = {isa = PBXFileReference; lastKnownFileType = text; path = LibraryA; sourceTree = SOURCE_ROOT; };
 		F11734302B68D2C400821BAF /* CommonManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonManagerTests.swift; sourceTree = "<group>"; };
 		F11734322B68D32300821BAF /* SPIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPIManagerTests.swift; sourceTree = "<group>"; };
+		F11734342B68D47500821BAF /* No_SPIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = No_SPIManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				F117342B2B68CE4400821BAF /* SPI_Tests.swift */,
 				F11734302B68D2C400821BAF /* CommonManagerTests.swift */,
 				F11734322B68D32300821BAF /* SPIManagerTests.swift */,
+				F11734342B68D47500821BAF /* No_SPIManagerTests.swift */,
 			);
 			path = spiSampleAppTests;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F117342C2B68CE4400821BAF /* SPI_Tests.swift in Sources */,
+				F11734352B68D47500821BAF /* No_SPIManagerTests.swift in Sources */,
 				F117342A2B68CE3E00821BAF /* No_SPI_Tests.swift in Sources */,
 				F11734332B68D32300821BAF /* SPIManagerTests.swift in Sources */,
 				F11734312B68D2C400821BAF /* CommonManagerTests.swift in Sources */,
