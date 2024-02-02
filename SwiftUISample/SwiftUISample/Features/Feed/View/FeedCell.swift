@@ -27,10 +27,10 @@ struct FeedCell: View {
         
         HStack(alignment: .bottom) {
           VStack(alignment: .leading) {
-            Text("John Doe")
+            Text(post.userName)
               .fontWeight(.semibold)
             
-            Text("This post is awesome")
+            Text(post.content)
           }
           .foregroundStyle(.white)
           .font(.subheadline)
@@ -51,7 +51,7 @@ struct FeedCell: View {
                   .frame(width: 30, height: 25)
                   .foregroundStyle(.white)
                 
-                Text("27")
+                Text("\(post.likes)")
                   .font(.footnote)
                   .foregroundStyle(.white)
                   .bold()
@@ -67,7 +67,7 @@ struct FeedCell: View {
                   .frame(width: 30, height: 25)
                   .foregroundStyle(.white)
                 
-                Text("27")
+                Text("\(post.comments)")
                   .font(.footnote)
                   .foregroundStyle(.white)
                   .bold()
@@ -77,7 +77,7 @@ struct FeedCell: View {
             Button {
               
             } label: {
-              Image(systemName: "bookmark.fill")
+              Image(systemName: post.isBookmarked ? "bookmark.fill" : "bookmark")
                 .resizable()
                 .frame(width: 20, height: 25)
                 .foregroundStyle(.white)
@@ -123,7 +123,12 @@ struct FeedCell: View {
   FeedCell(
     post: .init(
       id: UUID().uuidString,
-      videoURL: ""
+      videoURL: "",
+      userName: "John",
+      content: "This post is so cool",
+      likes: 30,
+      comments: 7,
+      isBookmarked: false
     ),
     player: AVPlayer()
   )

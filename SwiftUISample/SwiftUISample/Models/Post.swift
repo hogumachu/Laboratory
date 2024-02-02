@@ -10,4 +10,9 @@ import Foundation
 struct Post: Identifiable, Codable {
   let id: String
   let videoURL: String
+  let userName: String
+  let content: String
+  let likes: Int
+  let comments: Int
+  let isBookmarked: Bool
 }

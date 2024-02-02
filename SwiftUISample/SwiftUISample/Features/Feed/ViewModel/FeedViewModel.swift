@@ -25,8 +25,16 @@ final class FeedViewModel: ObservableObject {
   }
   
   func fetchPosts() {
-    posts = videoURLs.map {
-      return .init(id: UUID().uuidString, videoURL: $0)
+    posts = videoURLs.enumerated().map { offset, url in
+      return .init(
+        id: UUID().uuidString,
+        videoURL: url,
+        userName: "User\(offset)",
+        content: "This video is cool",
+        likes: offset + 30,
+        comments: offset,
+        isBookmarked: offset % 2 == 0
+      )
     }
   }
   

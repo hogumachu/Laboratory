@@ -25,6 +25,8 @@
 		F17E29332B6CC22B00FCB0CE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E29322B6CC22B00FCB0CE /* Post.swift */; };
 		F17E29382B6CC26100FCB0CE /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E29372B6CC26100FCB0CE /* FeedViewModel.swift */; };
 		F17E293B2B6CC46C00FCB0CE /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E293A2B6CC46C00FCB0CE /* CustomVideoPlayer.swift */; };
+		F17E293D2B6CE6D000FCB0CE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E293C2B6CE6D000FCB0CE /* User.swift */; };
+		F17E29432B6CE7A100FCB0CE /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E29422B6CE7A100FCB0CE /* ExploreViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		F17E29322B6CC22B00FCB0CE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F17E29372B6CC26100FCB0CE /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		F17E293A2B6CC46C00FCB0CE /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
+		F17E293C2B6CE6D000FCB0CE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F17E29422B6CE7A100FCB0CE /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +111,6 @@
 		F17E29112B6CA93B00FCB0CE /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				F17E29392B6CC46200FCB0CE /* Video */,
 				F17E29252B6CBD5900FCB0CE /* Profile */,
 				F17E29202B6CBB0900FCB0CE /* Notification */,
 				F17E291B2B6CB7F000FCB0CE /* Search */,
@@ -147,8 +150,8 @@
 		F17E291B2B6CB7F000FCB0CE /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				F17E291C2B6CB7F600FCB0CE /* ExploreView.swift */,
-				F17E291E2B6CB80F00FCB0CE /* UserCell.swift */,
+				F17E29412B6CE79A00FCB0CE /* ViewModel */,
+				F17E29402B6CE78F00FCB0CE /* View */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				F17E29322B6CC22B00FCB0CE /* Post.swift */,
+				F17E293C2B6CE6D000FCB0CE /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +196,7 @@
 		F17E29342B6CC24E00FCB0CE /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				F17E293A2B6CC46C00FCB0CE /* CustomVideoPlayer.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -213,12 +218,21 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		F17E29392B6CC46200FCB0CE /* Video */ = {
+		F17E29402B6CE78F00FCB0CE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F17E293A2B6CC46C00FCB0CE /* CustomVideoPlayer.swift */,
+				F17E291C2B6CB7F600FCB0CE /* ExploreView.swift */,
+				F17E291E2B6CB80F00FCB0CE /* UserCell.swift */,
 			);
-			path = Video;
+			path = View;
+			sourceTree = "<group>";
+		};
+		F17E29412B6CE79A00FCB0CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F17E29422B6CE7A100FCB0CE /* ExploreViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +311,9 @@
 				F17E292B2B6CBDCE00FCB0CE /* ProfileHeaderView.swift in Sources */,
 				F17E29302B6CBF4F00FCB0CE /* UserStatView.swift in Sources */,
 				F17E291A2B6CACD000FCB0CE /* FeedCell.swift in Sources */,
+				F17E29432B6CE7A100FCB0CE /* ExploreViewModel.swift in Sources */,
 				F17E29382B6CC26100FCB0CE /* FeedViewModel.swift in Sources */,
+				F17E293D2B6CE6D000FCB0CE /* User.swift in Sources */,
 				F17E29332B6CC22B00FCB0CE /* Post.swift in Sources */,
 				F17E29052B6CA91000FCB0CE /* ContentView.swift in Sources */,
 				F17E29222B6CBB1300FCB0CE /* NotificationView.swift in Sources */,
