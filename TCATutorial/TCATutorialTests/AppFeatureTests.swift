@@ -1,0 +1,24 @@
+//
+//  AppFeatureTests.swift
+//  TCATutorialTests
+//
+//  Created by 홍성준 on 2/3/24.
+//
+
+@testable import TCATutorial
+import ComposableArchitecture
+import XCTest
+
+@MainActor
+final class AppFeatureTests: XCTestCase {
+  
+  func testIncrementInFirstTab() async {
+    let store = TestStore(initialState: AppFeature.State()) {
+      AppFeature()
+    }
+    await store.send(.tab1(.incrementButtonTapped)) {
+      $0.tab1.count = 1
+    }
+  }
+  
+}
