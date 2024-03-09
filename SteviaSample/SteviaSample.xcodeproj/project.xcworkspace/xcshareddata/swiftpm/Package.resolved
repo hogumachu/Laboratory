@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "stevia",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/freshOS/Stevia",
+      "state" : {
+        "revision" : "090ffddd48f2f64f5c17a74f0cc61fe9387d71a5",
+        "version" : "5.1.4"
+      }
+    }
+  ],
+  "version" : 2
+}
